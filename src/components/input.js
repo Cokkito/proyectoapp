@@ -4,12 +4,16 @@ function Input(props) {
   return (
     <form onSubmit={props.handleSubmit}>
       <label>Ingrese un monto</label><br/>
-      <input
-        value={props.value}
-        onChange={props.handleInputChange}
-        type = "number"
-        className="new-task"
-      />
+      <div class="input-group mb-3">
+        <span className="input-group-text">$</span>
+        <input
+          value={props.value}
+          onChange={props.handleInputChange}
+          type = "number"
+          className="form-control"
+        />
+        <span className="input-group-text">.00</span>
+      </div>
     </form>
   );
 }
